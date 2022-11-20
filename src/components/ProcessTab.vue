@@ -25,7 +25,7 @@
       
           </div>
         </div>
-        <div class="swiper-wrapper bg-white rounded-b-2xl">
+        <div class="swiper-wrapper bg-white rounded-2xl -mt-[20px] pt-[30px]">
             <div class="swiper-slide">
                 <div class="grid grid-cols-12 gap-3 p-10 font-primary">
                     <div class="col-span-5 text-left">
@@ -62,7 +62,7 @@
             }
         }
         .swiper-slide {
-            @apply  text-white px-[32px] py-[30px] transition-all font-primary font-[600] cursor-pointer w-fit flex-1;
+            @apply  text-white px-[32px] py-[30px] h-[110px] transition-all font-primary font-[600] cursor-pointer w-fit flex-1;
             pointer-events: auto !important;
             &.swiper-slide-thumb-active {
                 @apply bg-white text-black rounded-t-xl relative flex-none;
@@ -71,7 +71,7 @@
                 &:before {
                     content: '';
                     position: absolute;
-                    bottom: 0;
+                    bottom: 20px;
                     left: -20px;
                     border-radius: 0 0 25px 0;
                     z-index: -1;
