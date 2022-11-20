@@ -10,10 +10,12 @@ module.exports = {
       center: true
     },
     screens: {
-      sm: '480px',
+      sm: '640px',
       md: '768px',
       lg: '976px',
       xl: '1390px',
+      '2xl': '1440px',
+    
     },
    
     extend: {

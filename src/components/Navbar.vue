@@ -3,7 +3,8 @@
         <a class="flex-none text-xl font-[700]" href="#">Digitalhead</a>
         <div 
             class="
-                flex 
+                hidden
+                lg:flex
                 flex-row 
                 items-center 
                 gap-5 
@@ -12,8 +13,8 @@
                 sm:mt-0 sm:pl-5
                 [&>a]:font-[400]
                 [&>a]:sm:text-sm
-                
                 [&>a]:lg:text-[16px]
+                
             "
         >
           <a class="" href="#" aria-current="page">Why Us</a>
@@ -25,11 +26,12 @@
         
         <button type="button" 
             class="
+                hidden
+                lg:inline-flex
                 w-[150px]
                 h-[47px]
                 py-3 
-                px-4 
-                inline-flex 
+                px-4                 
                 justify-center 
                 items-center 
                 gap-2 

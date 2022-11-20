@@ -9,11 +9,15 @@ import './assets/tailwind.css'
 // import '@mdi/font/css/materialdesignicons.css'
 
 import { Icon } from '@iconify/vue2';
-
+import autoAnimate from "@formkit/auto-animate";
 Vue.component('Icon',Icon);
 import 'preline'
 
-
+Vue.directive("auto-animate", {
+  inserted: function (el, binding) {
+    autoAnimate(el, binding.value);
+  }
+});
 
 
 
