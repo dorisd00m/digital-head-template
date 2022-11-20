@@ -313,6 +313,7 @@
           Our simple and easy process
         </h3>
         <p class="text-center text-white/50 text-2xl mb-20">Well-planned workflow with seamless design process executions</p>
+        <process-tab/>
       </div>
     </section>
   </div>
@@ -325,17 +326,21 @@
 <script>
 // @ is an alias to /src
 import HLineHeading from '@/components/HLineHeading.vue';
-
+import ProcessTab from '@/components/ProcessTab.vue';
+// import styles bundle
+import 'swiper/css/bundle';
 export default {
   name: 'HomeView',
   components: {
     'h-line': HLineHeading,
+    ProcessTab,
     
   },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
     })
+    
   },
 
   beforeDestroy() { 
