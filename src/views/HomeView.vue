@@ -296,6 +296,122 @@
         </div>
       </div>
     </section>
+    <section class="py-[100px]">
+      <div class="
+        flex 
+        justify-center 
+        items-center
+        gap-[100px]
+        before:content-['']
+        before:block
+        before:flex-1
+        before:h-[1px]
+        before:bg-primary/50
+        after:content-['']
+        after:block
+        after:flex-1
+        after:h-[1px]
+        after:bg-primary/50
+        text-primary/50
+        mb-16
+      ">
+        <h2 class="font-ClashDisplay-Variable font-[600] text-2xl">PRICING PLANS</h2>
+      </div>
+      <div class="container">
+        <h3 class="
+          text-center 
+          font-ClashDisplay-Semibold
+          w-full
+          text-[56px] 
+          text-primary 
+          leading-[68.72px]
+          mb-5
+        ">
+          One fixed price to get all the works <br/> done in a month 🏷️
+        </h3>
+        <p class="text-center text-primary/50 text-2xl mb-20">Your custom on-demand team for only a single monthly payment</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div v-for="(item,id) in dataPricing" :key="id" class="p-[28px] rounded-2xl shadow-lg font-primary text-left flex flex-col" :class="id != 1 ? 'bg-white text-black' : 'bg-black text-white'">
+            <div class="font-ClashDisplay-Semibold text-[24px] mb-5 flex justify-between">
+              <div>{{item.title}}</div>
+              <div></div>
+            </div>
+            <div class="mb-[16px]">
+              <strong class="font-ClashDisplay-Semibold text-[36px]">{{item.price}}</strong> 
+              <span v-show="id != 3" > / <span class="font-ClashDisplay-Regular text-[24px]">month</span></span>
+            </div>
+            <div class="text-[16px] font-primary mb-5" v-html="item.desc" :class="id != 1 ? 'text-primary/50 ' : 'text-white/50'"></div>
+            <ul v-if="Array.isArray(item.pros)" class="mb-[28px]">
+              <li v-for="(item,id) in item.pros" :key="id" class="flex gap-2 mb-3">
+                <img svg-inline src="@/assets/img/green-check.svg" />
+                {{item}}
+              </li>
+            </ul>
+            <div v-else >
+              <img :src="item.pros" alt="" class="w-full">
+            </div>
+            <button type="button" class="mt-auto font-[800] py-4 px-4 w-full lg:py-[21px] text-[16px] lg:px-[43px] inline-flex justify-center items-center gap-2 rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm" :class="id != 1 ? 'bg-primary text-white hover:bg-gray-500 focus:ring-primary' : 'bg-white text-black hover:bg-gray-300 focus:ring-white'">
+              {{ id != 3 ? 'Choose Plan' : 'Contact Us'}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-[100px]">
+      <div class="
+        flex 
+        justify-center 
+        items-center
+        gap-[100px]
+        before:content-['']
+        before:block
+        before:flex-1
+        before:h-[1px]
+        before:bg-primary/50
+        after:content-['']
+        after:block
+        after:flex-1
+        after:h-[1px]
+        after:bg-primary/50
+        text-primary/50
+        mb-16
+      ">
+        <h2 class="font-ClashDisplay-Variable font-[600] text-2xl">FAQs</h2>
+      </div>
+      <div class="container">
+        <h3 class="
+          text-center 
+          font-ClashDisplay-Semibold
+          w-full
+          text-[56px] 
+          text-primary 
+          leading-[68.72px]
+          mb-5
+        ">
+          What are your curiosities 👀?
+        </h3>
+        <p class="text-center text-primary/50 text-2xl mb-20">... or do you have other questions?</p>
+        <button type="button" class="font-[800] py-4 px-4 lg:py-[21px] lg:px-[43px] inline-flex justify-center items-center gap-2 rounded-full border border-transparent bg-primary text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all text-sm mb-16">
+          See All FAQs
+        </button>
+        <div class="hs-accordion-group columns-2 gap-10 font-primary">
+          <div v-for="(item,id) in dataFAQ" :key="id" class="hs-accordion border-b-2 py-[21px] " :class="id == 0 ? 'active' : ''"  :id="`hs-basic-heading-${id}`">
+            <button class="hs-accordion-toggle hs-accordion-active:mb-5 text-[24px] hs-accordion-active:text-blue-600 group inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 " :aria-controls="`hs-basic-heading-${id}`">
+              
+              {{item.question}}
+              <Icon icon="akar-icons:circle-plus" class="hs-accordion-active:rotate-45 transition-all text-[28px] ml-auto" />
+            </button>
+            <div :id="`hs-basic-heading-${id}`" class="hs-accordion-content w-full overflow-hidden transition-all duration-300 text-left hs-accordion-active:py-2" :class="id !== 0 ? 'hidden' : ''" :aria-labelledby="`hs-basic-heading-${id}`">
+              <p class="text-primary/50 text-[20px] font-[500] " v-html="item.answer">
+                
+              </p>
+            </div>
+          </div>
+
+         
+        </div>
+      </div>
+    </section>
     <section class="bg-primary py-[100px] lg:px-[20px]">
       <h-line :dark="true">
         THE PROCESS
@@ -314,6 +430,33 @@
         </h3>
         <p class="text-center text-white/50 text-2xl mb-20">Well-planned workflow with seamless design process executions</p>
         <process-tab/>
+      </div>
+    </section>
+    <section class="
+      min-h-[570px]
+      bg-[url('@/assets/img/people.png')]
+      bg-norepeat
+      bg-top
+      relative
+      py-[130px]
+      before:content-['']
+      before:absolute
+      before:left-0
+      before:top-0
+      before:right-0
+      before:h-full
+      before:z-10
+      before:bg-gradient-to-b
+      before:from-[rgba(24_,24_,24_,0)]
+      before:to-primary
+    ">
+      <div class="container relative z-20">
+        <h3 class="text-white font-ClashDisplay-Semibold leading-[79px] text-[64px] mb-[80px]">
+          You have come across the right choice! Our plan is the best monthly solution to all your product needs.
+        </h3>
+        <button type="button" class="font-[800] py-4 px-4 lg:py-[21px] lg:px-[43px] inline-flex justify-center items-center gap-2 rounded-full border border-transparent bg-white text-primary hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 transition-all text-sm">
+          Get Started Now <Icon icon="bi:arrow-right-circle" class="text-2xl ml-2" />
+        </button>
       </div>
     </section>
   </div>
@@ -369,6 +512,79 @@ export default {
   },
   data: () => ({
     windowWidth: window.innerWidth,
+    dataPricing: [
+      {
+        title: 'Intro',
+        price: `$1.750`,
+        desc: 'For startups and enterprises with <br/> on-going design needs.',
+        link: '',
+        pros: ['Logo & branding services','Graphic design services','Unlimited requests','Unlimited revisions','Unlimited brands','Native source files included','1-2 day turnaround','No Contract, Cancel Anytime'],
+      },
+      {
+        title: 'Basic',
+        price: `$2.800`,
+        desc: `
+          For those in need of website & 
+          illustrations. <br/><br/>
+          All the Intro plan features, and:
+        `,
+        link: '',
+        pros: ['Website & app design services','Custom illustration design services','Ongoing support & maintenance'],
+      },
+      {
+        title: 'Professional',
+        price: `$4.200`,
+        desc: `
+          For those in need of website & 
+          illustrations. <br/><br/>
+          All the Intro plan features, and:
+        `,
+        link: '',
+        pros: ['Animations services','Front-end development with ','Webflow','Ongoing support & maintenance','Same-day turnaround','Art Director'],
+
+      },
+      {
+        title: 'Custom Plan',
+        price: `Contact Us 😉`,
+        desc: `
+          Learn more about how SlabPixel 
+          works and how it can help you.
+        `,
+        link: '',
+        pros: require('@/assets/img/pricing-contactus.png'),
+
+      },
+    ],
+    dataFAQ: [
+      {
+        question: `What is SlabPixel ?`,
+        answer: `SlabPixel is an unlimited graphic design requests and 
+revisions for one flat monthly fee. We work with efficient and 
+high performing team to execute all the work.`
+
+      },
+      {
+        question: `Is it really unlimited requests?`,
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. `
+
+      },
+      {
+        question: `What are the work hours?`,
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. `
+
+      },
+      {
+        question: `How do we assign, monitor, and manage the task?`,
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. `
+
+      },
+      {
+        question: `What if I don't like the design?`,
+        answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. `
+
+
+      },
+    ],
     whyUs: [
       {
         icon: require('@/assets/img/home/message.svg'),
