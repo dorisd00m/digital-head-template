@@ -345,11 +345,11 @@
           text-[56px] 
           text-primary 
           leading-[68.72px]
-          mb-5
+          mb-10
         ">
           Significant-growing companies after our collaboration ❤️
         </h3>
-        <div class="mx-auto max-w-[727px] w-full rounded-xl flex relative min-h-[500px] bg-[url(@/assets/img/testibg.png)] bg-center bg-no-repeat bg-cover mb-10">
+        <div class="mx-auto max-w-[727px] w-full rounded-xl flex relative min-h-[500px] bg-[url(@/assets/img/testibg.png)] bg-center bg-no-repeat bg-cover mb-10`">
           <div class="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-[10] bg-[linear-gradient(180deg_,rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.8)_100%)] rounded-xl"></div>
           <div class="relative z-[20] h-full text-white w-full text-left self-end p-10">
             <div class="flex items-end gap-5">
@@ -415,11 +415,15 @@
           One fixed price to get all the works <br/> done in a month 🏷️
         </h3>
         <p class="text-center text-primary/50 text-2xl mb-20">Your custom on-demand team for only a single monthly payment</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-32">
           <div v-for="(item,id) in dataPricing" :key="id" class="p-[28px] rounded-2xl shadow-lg font-primary text-left flex flex-col" :class="id != 1 ? 'bg-white text-black' : 'bg-black text-white'">
             <div class="font-ClashDisplay-Semibold text-[24px] mb-5 flex justify-between">
               <div>{{item.title}}</div>
-              <div></div>
+              <div>
+                <button v-if="id == 1" type="button" class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-full border border-transparent font-semibold bg-[linear-gradient(95.56deg,_rgba(253,_99,_51,_1),_rgba(255,_212,_58,_1),_rgba(140,_103,_247,_1),_rgba(72,_211,_153,_1));] hover:bg-gradient-to-r hover:from-[#FD6333] hover:via-[#FFD43A] hover:to-[#48D399]  text-white  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 transition-all text-sm">
+                  Recomended
+                </button>
+              </div>
             </div>
             <div class="mb-[16px]">
               <strong class="font-ClashDisplay-Semibold text-[36px]">{{item.price}}</strong> 
@@ -440,6 +444,12 @@
             </button>
           </div>
         </div>
+        <div class="mb-10 text-primary text-2xl font-ClashDisplay-Medium">
+          See comparison on how each plan excel from the other
+        </div>
+        <button type="button" class="py-4 mb-10 px-20 inline-flex justify-center text-g items-center gap-2 rounded-full border-2 border-gray-900 font-semibold text-gray-800 hover:text-white hover:bg-gray-800 hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all">
+          Compare Pricing Plan 💲
+        </button>
       </div>
     </section>
     

@@ -26,23 +26,18 @@
           </div>
         </div>
         <div class="swiper-wrapper bg-white rounded-2xl -mt-[20px] pt-[30px]">
-            <div class="swiper-slide">
+            <div class="swiper-slide" v-for="(item,i) in dataTab" :key="i">
                 <div class="grid grid-cols-12 gap-3 p-10 font-primary">
-                    <div class="col-span-5 text-left">
-                        <h5 class="text-[32px] font-ClashDisplay-Semibold mb-2"> Subscribes Your Plans ✅</h5>
-                        <p class="text-primary/50 text-[20px]">Choose either which suits best whatever amount of works need to be done.</p>
+                    <div class="col-span-12 lg:col-span-5 text-left">
+                        <h5 class="text-[32px] font-ClashDisplay-Semibold mb-2" v-html="item.text"></h5>
+                        <p class="text-primary/50 text-[20px]" v-html="item.desc"></p>
+                    </div>
+                    <div class="col-span-12 lg:col-span-7">
+                        <img :src="item.img" />
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                
-            </div>
-            <div class="swiper-slide">
-                
-            </div>
-            <div class="swiper-slide">
-                
-            </div>
+          
        
         </div>
         <!-- <div class="swiper-button-next"></div> -->
@@ -99,6 +94,30 @@
 import Swiper from 'swiper/bundle';
 
 export default {
+    data: ()=>({
+        dataTab: [
+            {
+                text: `Subscribes Your Plans ✅`,
+                desc: `Choose either which suits best whatever amount of works need to be done.`,
+                img: 'https://assets.website-files.com/6229c581695b1439ca5bd352/628df8040afc12127ab2ce50_img-process-1.svg',
+            },
+            {
+                text: `Submit Your Task ✅`,
+                desc: `Experience how we simplify assigning projects within less than a day.`,
+                img: 'https://assets.website-files.com/6229c581695b1439ca5bd352/628df804aa525684b7e16049_img-process-2.svg',
+            },
+            {
+                text: `Draft & Revisions✅`,
+                desc: `Review project drafts and hand in revisions, both minor and significant changes.`,
+                img: 'https://assets.website-files.com/6229c581695b1439ca5bd352/628df80334fb2d50f4a5a826_img-process-3.svg',
+            },
+            {
+                text: `Approve & Get your file!✅`,
+                desc: `Experience how we simplify assigning projects within less than a day.`,
+                img: 'https://assets.website-files.com/6229c581695b1439ca5bd352/628df80399fd7a1ca8d07c64_img-process-4.svg',
+            },
+        ]
+    }),
     mounted() {
         var swiper = new Swiper(".mySwiper", {
             loop: false,
