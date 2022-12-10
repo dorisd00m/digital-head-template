@@ -296,6 +296,91 @@
         </div>
       </div>
     </section>
+    <section class="bg-primary py-[100px] lg:px-[20px]">
+      <h-line :dark="true">
+        THE PROCESS
+      </h-line>
+      <div class="container">
+        <h3 class="
+          text-center 
+          font-ClashDisplay-Semibold
+          w-full
+          text-[56px] 
+          text-white 
+          leading-[68.72px]
+          mb-5
+        ">
+          Our simple and easy process
+        </h3>
+        <p class="text-center text-white/50 text-2xl mb-20">Well-planned workflow with seamless design process executions</p>
+        <process-tab/>
+      </div>
+    </section>
+    <section class="py-[100px]">
+      <div class="
+        flex 
+        justify-center 
+        items-center
+        gap-[100px]
+        before:content-['']
+        before:block
+        before:flex-1
+        before:h-[1px]
+        before:bg-primary/50
+        after:content-['']
+        after:block
+        after:flex-1
+        after:h-[1px]
+        after:bg-primary/50
+        text-primary/50
+        mb-16
+      ">
+        <h2 class="font-ClashDisplay-Variable font-[600] text-2xl">OUR TESTIMONIAL</h2>
+      </div>
+      <div class="container">
+        <h3 class="
+          text-center 
+          font-ClashDisplay-Semibold
+          w-full
+          text-[56px] 
+          text-primary 
+          leading-[68.72px]
+          mb-5
+        ">
+          Significant-growing companies after our collaboration ❤️
+        </h3>
+        <div class="mx-auto max-w-[727px] w-full rounded-xl flex relative min-h-[500px] bg-[url(@/assets/img/testibg.png)] bg-center bg-no-repeat bg-cover mb-10">
+          <div class="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-[10] bg-[linear-gradient(180deg_,rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.8)_100%)] rounded-xl"></div>
+          <div class="relative z-[20] h-full text-white w-full text-left self-end p-10">
+            <div class="flex items-end gap-5">
+              <img src="@/assets/img/person-icon.svg" alt="" class="w-[220px]">
+              <div class="">
+
+                <div class="font-primary text-[20px] text-left text-white py-5">
+                  “After an extensive search we settled on SlabPixel. 
+                  We couldn’t be happier with the results. We have 
+                  no reservations about using them again.”
+                </div>
+                <hr>
+                <div class="flex gap-3 py-5">
+                    
+                    <div class="text-left">
+                        <div class="font-bold font-primary text-[20px]">
+                          Dave Hall
+                        </div>
+                        <div class="text-sm text-white/50">
+                          Owner of Dave Hall Consulting
+                            
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <testimo-slide />
+      </div>
+    </section>
     <section class="py-[100px]">
       <div class="
         flex 
@@ -357,6 +442,7 @@
         </div>
       </div>
     </section>
+    
     <section class="py-[100px]">
       <div class="
         flex 
@@ -412,26 +498,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-primary py-[100px] lg:px-[20px]">
-      <h-line :dark="true">
-        THE PROCESS
-      </h-line>
-      <div class="container">
-        <h3 class="
-          text-center 
-          font-ClashDisplay-Semibold
-          w-full
-          text-[56px] 
-          text-white 
-          leading-[68.72px]
-          mb-5
-        ">
-          Our simple and easy process
-        </h3>
-        <p class="text-center text-white/50 text-2xl mb-20">Well-planned workflow with seamless design process executions</p>
-        <process-tab/>
-      </div>
-    </section>
+    
     <section class="
       min-h-[570px]
       bg-[url('@/assets/img/people.png')]
@@ -472,11 +539,13 @@ import HLineHeading from '@/components/HLineHeading.vue';
 import ProcessTab from '@/components/ProcessTab.vue';
 // import styles bundle
 import 'swiper/css/bundle';
+import TestimoSlide from '@/components/TestimoSlide.vue';
 export default {
   name: 'HomeView',
   components: {
     'h-line': HLineHeading,
     ProcessTab,
+    TestimoSlide,
     
   },
   mounted() {
