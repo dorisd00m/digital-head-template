@@ -4,8 +4,8 @@
     <router-view/>
     <footer class="bg-primary min-h-[400px]">
       <div class="container">
-        <div class="flex flex-wrap lg:grid-cols-6 -mx-5">
-          <div class="w-6/12 px-5 text-left font-primary">
+        <div class="flex flex-wrap lg:grid-cols-6 md:-mx-5">
+          <div class="w-full md:w-6/12 px-5 text-left font-primary mb-20">
             <div class="font-[700] text-white text-left text-2xl mb-12">Digitalhead</div>
             <div class="text-white/50 font-[600] mb-16">
               Sharing Excellence, Unique  Creations. The impression you 
@@ -16,8 +16,8 @@
               Email : <a href="#">slabpixel@gmail.com</a>
             </div>
           </div>
-          <div class="w-6/12 px-5 ">
-            <div class="grid grid-cols-3 font-primary">
+          <div class="w-full md:w-6/12 px-5 ">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-10 font-primary">
               <div v-for="(item,id) in footerLink" :key="id">
                 <h6 class="uppercase text-white text-[16px] font-[700] text-left mb-12">{{item.title}}</h6>
                 <ul class="text-left flex flex-col gap-[20px]">

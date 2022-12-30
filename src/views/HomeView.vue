@@ -490,7 +490,7 @@
         <button type="button" class="font-[800] py-4 px-4 lg:py-[21px] lg:px-[43px] inline-flex justify-center items-center gap-2 rounded-full border border-transparent bg-primary text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all text-sm mb-16">
           See All FAQs
         </button>
-        <div class="hs-accordion-group columns-2 gap-10 font-primary">
+        <div class="hs-accordion-group flex flex-col lg:block lg:columns-2 gap-10 font-primary">
           <div v-for="(item,id) in dataFAQ" :key="id" class="hs-accordion border-b-2 py-[21px] " :class="id == 0 ? 'active' : ''"  :id="`hs-basic-heading-${id}`">
             <button class="hs-accordion-toggle hs-accordion-active:mb-5 text-[24px] hs-accordion-active:text-blue-600 group inline-flex items-center gap-x-3 w-full font-semibold text-left text-gray-800 transition hover:text-gray-500 " :aria-controls="`hs-basic-heading-${id}`">
               
@@ -528,7 +528,7 @@
       before:to-primary
     ">
       <div class="container relative z-20">
-        <h3 class="text-white font-ClashDisplay-Semibold leading-[79px] text-[64px] mb-[80px]">
+        <h3 class="text-white font-ClashDisplay-Semibold text-[40px] lg:leading-[79px] lg:text-[64px] mb-[80px]">
           You have come across the right choice! Our plan is the best monthly solution to all your product needs.
         </h3>
         <button type="button" class="font-[800] py-4 px-4 lg:py-[21px] lg:px-[43px] inline-flex justify-center items-center gap-2 rounded-full border border-transparent bg-white text-primary hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 transition-all text-sm">
